@@ -31,8 +31,10 @@ function App() {
               </div>
               <div className="max-w-4xl mx-auto mb-8">
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                  <video 
-                    controls 
+                  <video
+                    controls
+                    poster="/images/thumbnails/outer-ring-road.svg"
+                    onError={(e) => { (e.target as HTMLVideoElement).poster = '/images/thumbnails/placeholder.svg'; }}
                     className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl object-contain bg-black"
                     src="/outer-ring-road.mp4"
                     preload="metadata"
@@ -94,8 +96,10 @@ function App() {
               </div>
               <div className="max-w-4xl mx-auto mb-8 mt-12">
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                  <video 
-                    controls 
+                  <video
+                    controls
+                    poster="/images/thumbnails/flight.svg"
+                    onError={(e) => { (e.target as HTMLVideoElement).poster = '/images/thumbnails/placeholder.svg'; }}
                     className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl object-contain bg-black"
                     src="/flight.mp4"
                     preload="metadata"
@@ -147,8 +151,10 @@ function App() {
               </div>
               <div className="max-w-4xl mx-auto mb-8 mt-12">
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                  <video 
-                    controls 
+                  <video
+                    controls
+                    poster="/images/thumbnails/lorry-sand-unloading.svg"
+                    onError={(e) => { (e.target as HTMLVideoElement).poster = '/images/thumbnails/placeholder.svg'; }}
                     className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl object-contain bg-black"
                     src="/lorry-sand-unloading.mp4"
                     preload="metadata"

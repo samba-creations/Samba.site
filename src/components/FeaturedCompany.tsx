@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
-export default function FeaturedCompany() {
+interface FeaturedCompanyProps {
+  setActiveSection?: (section: string) => void;
+}
+
+export default function FeaturedCompany({ setActiveSection }: FeaturedCompanyProps) {
   const [lightbox, setLightbox] = useState<{ open: boolean; src: string; caption?: string }>({
     open: false,
     src: '',
@@ -39,10 +43,17 @@ export default function FeaturedCompany() {
                     </h2>
                     <p className="text-gray-600 mt-2 max-w-2xl">Manufacturer of high-precision drills and drilling systems for industrial and professional use.</p>
                     <ul className="mt-3 text-sm text-gray-600 space-y-1">
-                      <li><strong>Products:</strong> Bench drills, hand drills, CNC drilling systems</li>
-                      <li><strong>Founded:</strong> 2010</li>
-                      <li><strong>Location:</strong> Springfield, USA</li>
+                      <li><strong>Products:</strong> M2, M35 and M42 drills</li>
+                      <li><strong>Founded:</strong> 2007</li>
+                      <li><strong>Location:</strong> Near 8-B, Ambedkar Colony, JP Colony, Hyderabad, Telangana 502319</li>
+                      <li><strong>Industries:</strong> CNC DRILLING SYSTEM Machines and Car manufacturers etc.</li>
                     </ul>
+
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">M2 Drill</span>
+                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">M35 Drill</span>
+                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">M42 Drill</span>
+                    </div>
                   </div>
 
                   <div className="hidden md:flex md:flex-col items-end">
@@ -54,7 +65,12 @@ export default function FeaturedCompany() {
                 </div>
 
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <button className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium">Contact</button>
+                  <button
+                    onClick={() => setActiveSection ? setActiveSection('contact') : window.location.hash = '#contact'}
+                    className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium"
+                  >
+                    Contact
+                  </button>
                   <a href="#" className="px-6 py-3 border border-gray-200 rounded-lg text-sm text-gray-700 flex items-center justify-center">Learn more</a>
                 </div>
               </div>

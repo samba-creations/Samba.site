@@ -11,7 +11,13 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    const phone = '919949082277';
+    const message = `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nMessage: ${formData.message}`;
+    const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    // Redirect to WhatsApp with the prefilled message
+    window.location.href = waUrl;
   };
 
   const handleChange = (
@@ -27,19 +33,19 @@ function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      details: 'hello@innovator.com',
+      details: 'Sambacreations1@gmail.com',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
+      details: '+91 99490 82277',
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: MapPin,
       title: 'Location',
-      details: 'San Francisco, CA',
+      details: 'Near 8-B, Ambedkar Colony, JP Colony, Hyderabad, Telangana 502319',
       color: 'from-orange-500 to-amber-500',
     },
   ];
@@ -153,6 +159,16 @@ function Contact() {
                 <Send size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
+          </div>
+          <div className="mt-6">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                title="Samba Creations Location"
+                src="https://maps.google.com/maps?q=17.528472,78.268639&z=16&output=embed"
+                className="w-full h-64 border-0"
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

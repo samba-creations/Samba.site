@@ -52,7 +52,7 @@ function Hero({ setActiveSection }: HeroProps) {
 
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
             <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
@@ -67,7 +67,7 @@ function Hero({ setActiveSection }: HeroProps) {
 
           {/* Elevated featured company section with enhanced styling */}
           <div className="mt-32 mb-16">
-            <FeaturedCompany />
+            <FeaturedCompany setActiveSection={setActiveSection} />
           </div>
           <ProductSpecs />
           {/* Additional home sections */}

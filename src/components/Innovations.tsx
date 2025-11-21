@@ -64,8 +64,10 @@ function Innovations() {
           <div className="text-center py-12">
             <div className="max-w-4xl mx-auto mb-8">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                <video 
-                  controls 
+                <video
+                  controls
+                  poster="/images/thumbnails/ez-scrubber.svg"
+                  onError={(e) => { (e.target as HTMLVideoElement).poster = '/images/thumbnails/placeholder.svg'; }}
                   className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl object-contain bg-black"
                   src="/ez-scrubber.mp4"
                   preload="metadata"
@@ -102,8 +104,10 @@ function Innovations() {
 
             <div className="max-w-4xl mx-auto mb-8 mt-12">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                <video 
-                  controls 
+                <video
+                  controls
+                  poster="/images/thumbnails/urethral-tube.svg"
+                  onError={(e) => { (e.target as HTMLVideoElement).poster = '/images/thumbnails/placeholder.svg'; }}
                   className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl object-contain bg-black"
                   src="/urethral-tube.mp4"
                   preload="metadata"
@@ -111,12 +115,38 @@ function Innovations() {
                   Your browser does not support the video tag.
                 </video>
               </div>
+              <div className="mt-6 bg-white rounded-xl shadow-lg p-6 text-left">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Urethral Tube — Women Urinary Aid</h3>
+                <p className="text-gray-700 mb-4">Women can also urinate just like men using this urinary tube. Main benefits include:</p>
+
+                <ul className="space-y-3 text-gray-700 mb-4">
+                  <li className="flex items-start"><span className="font-semibold mr-2">1.</span><span>For pregnant women</span></li>
+                  <li className="flex items-start"><span className="font-semibold mr-2">2.</span><span>For obese women</span></li>
+                  <li className="flex items-start"><span className="font-semibold mr-2">3.</span><span>For women who have undergone delivery or surgery</span></li>
+                  <li className="flex items-start"><span className="font-semibold mr-2">4.</span><span>For ladies with knee pain</span></li>
+                  <li className="flex items-start"><span className="font-semibold mr-2">5.</span><span>For girls and college-going young women</span></li>
+                  <li className="flex items-start"><span className="font-semibold mr-2">6.</span><span>Very useful for all women</span></li>
+                </ul>
+
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">How to use this urinary tube</h4>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-4">
+                  <li>Stand in the same position as men do while urinating.</li>
+                  <li>Use the fingers of your left hand to gently open the urinary area.</li>
+                  <li>Use the fingers of your right hand to locate the urinary passage.</li>
+                  <li>Take the urinary tube, place it close to the urinary opening, hold it firmly, and urinate just like men.</li>
+                  <li>Since urine won’t splash on the body, there is no need to wash.</li>
+                  <li>This tube can be cleaned and stored for repeated use.</li>
+                  <li>It is made from materials that do not cause any harm to the human body.</li>
+                </ul>
+              </div>
             </div>
 
             <div className="max-w-4xl mx-auto mb-8 mt-12">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                <video 
-                  controls 
+                <video
+                  controls
+                  poster="/images/thumbnails/dry-coconut-cutter.svg"
+                  onError={(e) => { (e.target as HTMLVideoElement).poster = '/images/thumbnails/placeholder.svg'; }}
                   className="absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl object-contain bg-black"
                   src="/dry-coconut-cutter.mp4"
                   preload="metadata"
