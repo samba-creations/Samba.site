@@ -45,7 +45,7 @@ function Contact() {
     {
       icon: MapPin,
       title: 'Location',
-      details: 'Near 8-B, Ambedkar Colony, JP Colony, Hyderabad, Telangana 502319',
+      details: 'HITECH ENGINEERING\nHYDERABAD 502319\nINDIA.',
       color: 'from-orange-500 to-amber-500',
     },
   ];
@@ -76,7 +76,7 @@ function Contact() {
                   <Icon size={28} className="text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
-                <p className="text-gray-600">{info.details}</p>
+                <p className="text-gray-600 whitespace-pre-line">{info.details}</p>
               </div>
             );
           })}
